@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ShopContext } from './ShopContext';
 const ProductDisplay = (props) => {
     const { product } = props;
+const {addToCart} = useContext(ShopContext)
+
+
     return (
         <>
         <div className='display flex my-0 mx-[70px]'>
@@ -40,7 +44,7 @@ const ProductDisplay = (props) => {
                         <li className='py-3 px-5 bg-[#fbfbfb] border border-solid cursor-pointer'>XXL</li>
                     </ul>
                 </div>
-                <button className='py-3 rounded-md w-48 text-base bg-pink-400 mb-10 border-none outline-none transition ease-in-out duration-300 transform hover:scale-105'>ADD TO CART</button>
+                <button className='py-3 rounded-md w-48 text-base bg-pink-400 mb-10 border-none outline-none transition ease-in-out duration-300 transform hover:scale-105' onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
                 <p className='category mt-1'><span className='font-semibold'>Category: </span>Women, T-Shirt, Crop Top</p>
                 <p className='categoryy mt-1'><span className='font-semibold'>Tags: </span>Modern, Latest</p>
 

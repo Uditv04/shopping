@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ShopContext } from './ShopContext';
 
 const Navbar = () => {
     const [product, setProduct] = useState('shop');
+    const {getTotalCartItems} = useContext(ShopContext)
     return (
         <div className='bg-[#c22b79] '>
             <nav className='flex p-5'>
@@ -49,7 +51,7 @@ const Navbar = () => {
                             style={{ "width": "30px", "height": "30px" }}
                             src="https://cdn.lordicon.com/pbrgppbb.json"
                             trigger="hover">
-                        </lord-icon><div className="cart-count">0</div>
+                        </lord-icon><div className="cart-count ">{getTotalCartItems()}</div>
                         </button>
                         
                     </Link>
