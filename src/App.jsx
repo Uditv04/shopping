@@ -7,7 +7,6 @@ import ShopCategory from './components/pages/ShopCategory'
 import Product from './components/pages/Products'
 import Cart from './components/pages/Cart'
 import Login from './components/pages/Login'
-import Wishlist from './components/pages/Wishlist'
 import Footer from './components/Footer'
 import banner_mens from '../public/banner_mens.png'
 import banner_women from '../public/banner_women.png'
@@ -33,7 +32,6 @@ function App() {
 </Route>
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/login' element={<Login/>}/>
-<Route path='/wishlist' element={<Wishlist/>}/>
     </Routes>
 
 <Footer/>
