@@ -54,13 +54,13 @@ const Navbar = () => {
                         ></lord-icon>
                     </Link>
 
-                    <Link to="/wishlist" className='flex justify-center items-center'>
+                    {/* <Link to="/wishlist" className='flex justify-center items-center'>
                         <lord-icon
                             style={{ width: "30px", height: "30px" }}
                             src="https://cdn.lordicon.com/ulnswmkk.json"
                             trigger="hover"
                         ></lord-icon>
-                    </Link>
+                    </Link> */}
 
                     <Link to="/cart" className='relative flex justify-center items-center'>
                         <lord-icon
