@@ -1,72 +1,82 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../ShopContext'
+import React, { useContext } from 'react';
+import { ShopContext } from '../ShopContext';
 
 const Cart = () => {
-  const {getTotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext)
+  const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
   return (
-    <div className='item my-24 mx-40'>
-      <div className="format grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1fr] items-center gap-20 py-4 px-0 font-semibold text-lg">
+    <div className="item my-16 mx-6 md:mx-12 lg:mx-40">
+      <div className="format hidden sm:grid grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr] items-center gap-4 lg:gap-8 py-4 px-0 font-semibold text-base lg:text-lg">
         <p>Product</p>
-        <p className='mx-20'>Title</p>
+        <p className="mx-4 md:mx-10 lg:mx-20">Title</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Total</p>
         <p>Remove</p>
       </div>
-      <hr className='h-1 border-0 bg-[#e2e2e2]'/>
-     {all_product.map((e)=>{
-      if (cartItems[e.id]>0){
-        return  <div>
-        <div className="format grid grid-cols-[0.5fr_2fr_1fr_1fr_1fr_1fr] items-center gap-20 py-5 px-0 font-semibold text-lg">
-          <img src={e.image} alt="" className='icon' />
-          <p>{e.name}</p>
-          <p className='m-2'>${e.new_price}</p>
-          <button className='quantity border w-8 m-6'>{cartItems[e.id]}</button>
-          <p className='m-2'>${e.new_price*cartItems[e.id]}</p>
-          <span className='m-6' onClick={()=>{removeFromCart(e.id)}}>
-          <lord-icon
-            src="https://cdn.lordicon.com/skkahier.json"
-            trigger="hover"
-            style={{ "width": "25px", "height": "25px" }}>
-          </lord-icon>
-          </span>
+      <hr className="h-1 border-0 bg-[#e2e2e2]" />
+      {all_product.map((e) => {
+        if (cartItems[e.id] > 0) {
+          return (
+            <div key={e.id}>
+              <div className="format grid grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr] items-center gap-4 lg:gap-8 py-4 px-0 font-semibold text-sm md:text-base lg:text-lg">
+                <img src={e.image} alt="" className="icon w-12 h-12 md:w-16 md:h-16" />
+                <p>{e.name}</p>
+                <p className="m-2">${e.new_price}</p>
+                <button className="quantity border w-8 h-8 m-2">{cartItems[e.id]}</button>
+                <p className="m-2">${e.new_price * cartItems[e.id]}</p>
+                <span className="m-2" onClick={() => removeFromCart(e.id)}>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/skkahier.json"
+                    trigger="hover"
+                    style={{ width: "20px", height: "20px" }}
+                  ></lord-icon>
+                </span>
+              </div>
+              <hr />
+            </div>
+          );
+        }
+        return null;
+      })}
+      <div className="cart-down flex flex-col md:flex-row my-16 mx-0 gap-10">
+        <div className="total flex flex-1 flex-col gap-6 px-4 md:px-0">
+          <h1 className="font-bold text-lg">Total</h1>
+          <div>
+            <div className="total-item flex justify-between py-2 md:py-4">
+              <p>Subtotal</p>
+              <p>${getTotalCartAmount()}</p>
+            </div>
+            <hr />
+            <div className="total-item flex justify-between py-2 md:py-4">
+              <p>Shipping Fee</p>
+              <p>Free</p>
+            </div>
+            <hr />
+            <div className="total-item flex justify-between py-2 md:py-4">
+              <h3 className="font-semibold">Total</h3>
+              <h3>${getTotalCartAmount()}</h3>
+            </div>
+          </div>
+          <button className="outline-none border-none h-12 w-full md:w-64 text-sm md:text-base font-semibold bg-pink-500 rounded-md transition ease-in-out duration-300 transform hover:scale-105">
+            PROCEED TO CHECKOUT
+          </button>
         </div>
-        <hr />
+        <div className="promo flex-1 flex flex-col gap-4 text-sm md:text-base font-medium px-4 md:px-0">
+          <p>If you have a promo code, enter it here</p>
+          <div className="promobox flex w-full max-w-xs md:max-w-md lg:max-w-lg p-2 bg-[#eaeaea]">
+            <input
+              className="border-none outline-none bg-transparent flex-grow text-sm md:text-base h-10 md:h-12"
+              type="text"
+              placeholder="Promo code"
+            />
+            <button className="w-24 h-10 md:w-32 md:h-12 text-sm md:text-base bg-pink-500 transition ease-in-out duration-300 transform hover:scale-105">
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
-      }
-      return null;
-     })}
-     <div className="cart-down flex my-24 mx-0">
-<div className="total flex flex-1 flex-col mr-48 gap-10">
-  <h1 className='font-bold'>Total</h1>
-  <div>
-    <div className="total-item flex justify-between py-4 px-0">
-      <p>Subtotal</p>
-      <p>${getTotalCartAmount()}</p>
     </div>
-    <hr />
-    <div className="total-item flex justify-between py-4 px-0">
-      <p>Shipping Fee</p>
-      <p>Free</p>
-    </div>
-    <hr />
-    <div className="total-item flex justify-between py-4 px-0">
-      <h3 className='font-semibold'>Total</h3>
-      <h3>${getTotalCartAmount()}</h3>
-    </div>
-  </div>
-  <button className='outline-none border-none h-14 w-64 text-base font-semibold bg-pink-500 rounded-md transition ease-in-out duration-300 transform hover:scale-105' >PROCEED TO CHECKOUT</button>
-</div>
-<div className="promo flex-1 text-base font-medium">
-  <p>If you have a promo code, Enter it here</p>
-  <div className="promobox w-[504px] mt-4 pl-5 h-14 bg-[#eaeaea]">
-    <input className='border-none outline-none bg-transparent text-base w-80 h-12' type="text" placeholder='Promocode'/>
-    <button className='w-40 h-14 text-base bg-pink-500 transition ease-in-out duration-300 transform hover:scale-105'>Submit</button>
-  </div>
-</div>
-     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

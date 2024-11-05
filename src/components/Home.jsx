@@ -2,28 +2,29 @@ import React from 'react';
 import data_product from '../../public/data';
 import new_collections from '../../public/new_collections';
 import Item from './Item';
+import bgImage from '../../public/imggg.jpg'
 
 const Home = () => {
     return (
         <>
             {/* NEW ARRIVALS */}
-            <div className='Home flex flex-col lg:flex-row min-h-screen bg-[#fed1ff] p-4 lg:p-0'>
+            <div className='Home flex flex-col lg:flex-row min-h-screen p-4 lg:p-0 h-screen bg-cover bg-center' style={{ backgroundImage: `url(${bgImage})` }}>
                 <div className="home-left flex flex-1 flex-col justify-center gap-5 lg:gap-10 lg:pl-20 leading-4">
                     <h2 className='font-semibold text-4xl lg:text-6xl pl-0 lg:pl-20 py-5'>NEW ARRIVALS</h2>
                     <div className="hand-icon items-center gap-3 lg:gap-5 lg:pl-20">
                         <p className='font-bold text-2xl lg:text-4xl'>New Collections</p>
                         <p className='font-bold text-2xl lg:text-4xl'>for Everyone</p>
                     </div>
-                    <div className="home-btn flex lg:pl-20">
-                    <div className='bg-[#ff4141] flex justify-center items-center gap-2 lg:gap-4 w-[150px] sm:w-[180px] lg:w-[310px] h-[40px] sm:h-[50px] lg:h-[70px] rounded-3xl mt-[10px] sm:mt-[20px] font-medium text-base sm:text-lg lg:text-xl hover:font-bold'>
-    Latest Collection
-    <img src="arrow.png" alt="" className='w-4 sm:w-5 lg:w-6' />
-</div>
+                    <div className="home-btn flex lg:pl-20 ">
+                        <button className='bg-[#ff4141] flex justify-center items-center gap-2 lg:gap-4 w-[150px] sm:w-[180px] lg:w-[310px] h-[40px] sm:h-[50px] lg:h-[80px] rounded-2xl mt-[10px] sm:mt-[20px] font-medium sm:text-sm lg:text-lg hover:font-bold'>
+                        Latest Collection
+                        <img src="arrow.png" alt="" className='w-4 sm:w-4 lg:w-5' />
+                        </button>
                     </div>
                 </div>
-                <div className="home-right mx-0 lg:mx-20 flex justify-center">
-    <img src="hero_image.png" alt="Hero" className='w-40 sm:w-60 lg:w-[484px] h-auto' />
-</div>
+                {/* <div className="home-right mx-0 lg:mx-20 flex justify-center">
+    <img src="imgg.jpg" alt="" className='w-40 sm:w-60 lg:w-[484px] h-auto rounded-3xl' />
+</div> */}
             </div>
 
             {/* POPULAR */}
