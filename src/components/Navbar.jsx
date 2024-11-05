@@ -16,10 +16,12 @@ const Navbar = () => {
                 
                 {/* Toggle Button for Mobile */}
                 <button
-                    className='lg:hidden text-white p-2'
+                    className='lg:hidden text-white p-2 mr-32'
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    <lord-icon src="https://cdn.lordicon.com/zpxybbhl.json" trigger="hover" style={{ width: "30px", height: "30px" }} />
+                ><lord-icon
+                src="https://cdn.lordicon.com/ipnwkgdy.json"
+                trigger="hover">
+            </lord-icon>
                 </button>
 
                 {/* Links - shown based on screen size */}
