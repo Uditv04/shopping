@@ -7,8 +7,9 @@ import bgImage from '../../public/imggg.jpg'
 const Home = () => {
     return (
         <>
+        
             {/* NEW ARRIVALS */}
-            <div className='Home flex flex-col lg:flex-row min-h-screen p-4 lg:p-0 h-screen bg-cover bg-center' style={{ backgroundImage: `url(${bgImage})` }}>
+            <div className='Home flex flex-col lg:flex-row min-h-screen p-4 lg:p-0 h-screen bg-cover bg-center' style={{ backgroundImage: `url(${bgImage})`, }}>
                 <div className="home-left flex flex-1 flex-col justify-center gap-5 lg:gap-10 lg:pl-20 leading-4">
                     <h2 className='font-semibold text-4xl lg:text-6xl pl-0 lg:pl-20 py-5'>NEW ARRIVALS</h2>
                     <div className="hand-icon items-center gap-3 lg:gap-5 lg:pl-20">
@@ -16,7 +17,7 @@ const Home = () => {
                         <p className='font-bold text-2xl lg:text-4xl'>for Everyone</p>
                     </div>
                     <div className="home-btn flex lg:pl-20 ">
-                        <button className='bg-[#ff4141] flex justify-center items-center gap-2 lg:gap-4 w-[150px] sm:w-[180px] lg:w-[310px] h-[40px] sm:h-[50px] lg:h-[80px] rounded-2xl mt-[10px] sm:mt-[20px] font-medium sm:text-sm lg:text-lg hover:font-bold'>
+                        <button className='bg-[#ff4141] flex justify-center items-center gap-2 lg:gap-4 w-[150px] sm:w-[180px] lg:w-[310px] h-[40px] sm:h-[50px] lg:h-[80px] rounded-2xl mt-[10px] sm:mt-[20px] font-medium xl:text-2xl sm:text-sm lg:text-lg transition ease-in-out duration-300 transform hover:scale-105'>
                         Latest Collection
                         <img src="arrow.png" alt="" className='w-4 sm:w-4 lg:w-5' />
                         </button>
@@ -44,7 +45,7 @@ const Home = () => {
                     <h1 className='text-3xl lg:text-5xl font-semibold'>EXCLUSIVE</h1>
                     <h1 className='text-3xl lg:text-5xl font-semibold'>OFFERS FOR YOU</h1>
                     <p className='text-lg lg:text-xl font-semibold pt-4 lg:pt-8 text-center lg:text-left'>ONLY ON BEST SELLERS PRODUCTS</p>
-                    <button className='w-[150px] lg:w-[200px] h-[50px] lg:h-[60px] rounded-full bg-red-600 text-lg lg:text-2xl font-medium mt-4 lg:mt-7'>Check Now</button>
+                    <button className='w-[150px] lg:w-[200px] h-[50px] lg:h-[60px] rounded-full bg-red-600 text-lg lg:text-2xl font-medium mt-4 lg:mt-7 transition ease-in-out duration-300 transform hover:scale-105'>Check Now</button>
                 </div>
                 <div className="offer-right flex flex-1 items-center justify-center lg:justify-end pt-8 lg:pt-12">
                     <img src="exclusive_image.png" alt="" className='w-48 lg:w-auto' />
@@ -63,13 +64,13 @@ const Home = () => {
             </div>
 
             {/* LATEST NEWS */}
-            <div className='latest-news my-36 lg:my-80 w-[65%] p-8 mb-[150px] flex flex-col items-center justify-center m-auto gap-8 bg-[linear-gradient(180deg,_#fed1ff_0%,_#e1ffea22_100%)] rounded-lg'>
+            <div className='latest-news my-36 lg:my-70 w-[65%] p-8 mt-[300px] flex flex-col items-center justify-center m-auto gap-8 bg-[linear-gradient(180deg,_#fed1ff_0%,_#e1ffea22_100%)] rounded-lg'>
                 <h1 className='text-3xl lg:text-5xl font-bold text-center'>Get Exclusive Offers On Your Email</h1>
                 <p className='text-xl lg:text-2xl text-center'>Send us your email & stay updated</p>
                 <div className='flex flex-col lg:flex-row items-center justify-between bg-white w-full lg:w-[50vw] h-12 rounded-xl'>
                     <input type="email" className='flex-1 border-none outline-none p-2 text-sm lg:text-base' placeholder='Enter Your Email Id' />
                 </div>
-                <button className='text-white h-10 w-24 lg:w-28 bg-black rounded-full hover:bg-slate-900 hover:font-bold'>Submit</button>
+                <button className='text-white h-10 w-24 lg:w-28 bg-black rounded-full transition ease-in-out duration-300 transform hover:scale-105'>Submit</button>
             </div>
         </>
     )

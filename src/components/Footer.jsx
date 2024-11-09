@@ -20,10 +20,19 @@ const Footer = () => {
       </ul>
 
       {/* Social Icons */}
-      <div className="social-icons flex gap-4 sm:gap-8 p-3 bg-[#fbfbfb] rounded-lg">
-        <img src="/instagram_icon.png" alt="Instagram" className='w-6 sm:w-8' />
-        <img src="/pintester_icon.png" alt="Pinterest" className='w-6 sm:w-8' />
-        <img src="/whatsapp_icon.png" alt="WhatsApp" className='w-6 sm:w-8' />
+      <div className="social-icons flex gap-4 xl:gap-8 sm:gap-8 p-3 bg-pink-400 rounded-lg">
+      <lord-icon
+    src="https://cdn.lordicon.com/bfoumeno.json"
+    trigger="hover">
+</lord-icon>
+        <lord-icon
+    src="https://cdn.lordicon.com/scdlwzys.json"
+    trigger="hover">
+</lord-icon>
+<lord-icon
+    src="https://cdn.lordicon.com/dnphlhar.json"
+    trigger="hover">
+</lord-icon>
       </div>
 
       {/* Footer Bottom Section */}

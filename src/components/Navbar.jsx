@@ -8,7 +8,8 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className='bg-[#c22b79]'>
+        <>
+        <div className='bg-[#be377d]'>
             <nav className='flex items-center justify-between p-4'>
                 <a href="/" className='flex items-center'>
                     <img src="/Luxora.png" alt="Logo" width={40} height={40} />
@@ -43,7 +44,7 @@ const Navbar = () => {
                         style={{ width: "30px", height: "30px", marginLeft: "-4px", borderRadius: "6px" }}
                         src="https://cdn.lordicon.com/fkdzyfle.json"
                         trigger="hover"
-                    ></lord-icon>
+                        ></lord-icon>
                 </div>
 
                 {/* Icons */}
@@ -53,16 +54,16 @@ const Navbar = () => {
                             style={{ width: "30px", height: "30px" }}
                             src="https://cdn.lordicon.com/hrjifpbq.json"
                             trigger="hover"
-                        ></lord-icon>
+                            ></lord-icon>
                     </Link>
 
                     {/* <Link to="/wishlist" className='flex justify-center items-center'>
                         <lord-icon
-                            style={{ width: "30px", height: "30px" }}
-                            src="https://cdn.lordicon.com/ulnswmkk.json"
-                            trigger="hover"
+                        style={{ width: "30px", height: "30px" }}
+                        src="https://cdn.lordicon.com/ulnswmkk.json"
+                        trigger="hover"
                         ></lord-icon>
-                    </Link> */}
+                        </Link> */}
 
                     <Link to="/cart" className='relative flex justify-center items-center'>
                         <lord-icon
@@ -82,6 +83,7 @@ const Navbar = () => {
                 
             </div>
         </div>
+                            </>
     );
 }
 
