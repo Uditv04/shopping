@@ -70,7 +70,7 @@ const Navbar = () => {
                             src="https://cdn.lordicon.com/pbrgppbb.json"
                             trigger="hover"
                         ></lord-icon>
-                        <div className="cart-count absolute top-0 right-0 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                        <div className="cart-count absolute top-0 right-0  text-black rounded-full w-1 h-2 flex items-center justify-center text-xs">
                             {getTotalCartItems()}
                         </div>
                     </Link>
