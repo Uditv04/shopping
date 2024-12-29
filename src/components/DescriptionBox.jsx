@@ -4,7 +4,7 @@ const DescriptionBox = () => {
   return (
     <div className='box my-10 sm:my-20 lg:my-[120px] mx-4 sm:mx-10 lg:mx-[170px] text-white'>
       {/* Navigator Section */}
-      <div className="navigator flex flex-wrap items-center justify-center sm:justify-start">
+      <div className="navigator flex flex-wrap items-center justify-center sm:justify-start p-2 gap-5">
         <h1 className="nav-box text-sm sm:text-base font-semibold w-32 sm:w-40 h-12 border border-solid border-[#d0d0d0] text-center p-3">Description</h1>
         <h1 className="fade text-sm sm:text-base font-semibold w-32 sm:w-40 h-12 border border-solid border-[#d0d0d0] text-center p-3">Reviews (500)</h1>
       </div>
