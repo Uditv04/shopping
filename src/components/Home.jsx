@@ -9,9 +9,9 @@ const Home = () => {
      <div className="bg-[radial-gradient(125%_125%_at_50%_10%,#000_50%,#63e_80%)]">
   {/* NEW ARRIVALS */}
   <div className="flex flex-col lg:flex-row min-h-screen p-4 lg:p-0 text-white max-w-screen-2xl mx-auto mb-12">
-    <div className="flex flex-1 flex-col justify-center gap-5 lg:gap-10 lg:pl-20">
+    <div className="flex flex-1 flex-col justify-center gap-5 lg:gap-10 lg:pl-20 items-center">
       <h2 className="font-semibold text-4xl lg:text-6xl">NEW ARRIVALS</h2>
-      <p className="font-bold text-2xl lg:text-4xl">New Collections for Everyone</p>
+      <p className="font-bold text-2xl lg:text-4xl text-center">New Collections for Everyone</p>
       <button className="bg-transparent border border-transparent shadow-[0_0_10px_rgba(128,118,228,0.7)] focus:outline-none focus:ring-2 focus:ring-purple-500 flex justify-center items-center gap-2 lg:gap-4 w-[150px] sm:w-[180px] lg:w-[310px] h-[40px] sm:h-[50px] lg:h-[80px] rounded-2xl mt-[10px] sm:mt-[20px] font-medium xl:text-2xl sm:text-sm lg:text-lg transition ease-in-out duration-300 transform hover:scale-105 text-white px-6 py-3">
         Latest Collection
       </button>
