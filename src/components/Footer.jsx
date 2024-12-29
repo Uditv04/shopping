@@ -2,11 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='footer flex flex-col justify-center items-center gap-6 sm:gap-8 bg-pink-500 text-white py-8 sm:py-10'>
+    <div className='footer flex flex-col justify-center items-center gap-6 sm:gap-8 bg-black text-white py-8 sm:py-10'>
       
       {/* Footer Logo */}
       <div className="footer-logo flex flex-col sm:flex-row gap-4 items-center">
-        <img src="/Luxora.png" alt="Luxora Logo" width={44} height={44} />
+        <img src="/luxoral.png" alt="Luxora Logo" width={44} height={44} />
         <p className='text-4xl sm:text-5xl font-light'>LUXORA</p>
       </div>
 
@@ -20,17 +20,20 @@ const Footer = () => {
       </ul>
 
       {/* Social Icons */}
-      <div className="social-icons flex gap-4 xl:gap-8 sm:gap-8 p-3 bg-pink-400 rounded-lg">
+      <div className="social-icons flex gap-4 xl:gap-8 sm:gap-8 p-3  rounded-lg">
       <lord-icon
     src="https://cdn.lordicon.com/bfoumeno.json"
+    colors="primary:#ffffff"
     trigger="hover">
 </lord-icon>
         <lord-icon
     src="https://cdn.lordicon.com/scdlwzys.json"
+    colors="primary:#ffffff"
     trigger="hover">
 </lord-icon>
 <lord-icon
     src="https://cdn.lordicon.com/dnphlhar.json"
+    colors="primary:#ffffff"
     trigger="hover">
 </lord-icon>
       </div>

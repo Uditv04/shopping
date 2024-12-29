@@ -4,7 +4,7 @@ import Item from './Item';
 
 const RelatedProducts = () => {
   return (
-    <div className='related flex flex-col items-center gap-4 py-8'>
+    <div className='related flex flex-col items-center gap-4 py-8 text-white'>
       {/* Title Section */}
       <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>Related Products</h1>
       <hr className='w-24 sm:w-32 lg:w-52 h-1 rounded-xl bg-[#252525]' />

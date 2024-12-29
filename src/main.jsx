@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ShopContextProvider>
     <App />
-
     </ShopContextProvider>
+    
   </StrictMode>,
 )

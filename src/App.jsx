@@ -7,10 +7,11 @@ import ShopCategory from './components/pages/ShopCategory'
 import Product from './components/pages/Products'
 import Cart from './components/pages/Cart'
 import Login from './components/pages/Login'
-import Footer from './components/Footer'
+import Footer from './components/Footer.jsx'
 import banner_mens from '../public/banner_mens.png'
 import banner_women from '../public/banner_women.png'
 import banner_kids from '../public/banner_kids.png'
+import Signup from './components/pages/Signup'
 
 function App() {
 
@@ -32,9 +33,10 @@ function App() {
 </Route>
 <Route path='/cart' element={<Cart/>}/>
 <Route path='/login' element={<Login/>}/>
+<Route path='/signup' element={<Signup/>}/>
     </Routes>
 
-<Footer/>
+    <Footer/>
     </BrowserRouter>
     </>
   )

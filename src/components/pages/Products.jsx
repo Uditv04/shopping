@@ -10,7 +10,7 @@ const Products = () => {
   const {productId} = useParams()
   const product = all_product.find((e)=> e.id=== Number(productId))
   return (
-    <div>
+    <div className='bg-[radial-gradient(circle_farthest-side,rgba(12,1,128,0.8),#000000)] min-h-screen'>
       <BreadCrum product={product}/>
       <ProductDisplay product={product} />
       <DescriptionBox />

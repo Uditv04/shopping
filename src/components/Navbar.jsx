@@ -9,10 +9,10 @@ const Navbar = () => {
 
     return (
         <>
-        <div className='bg-[#be377d]'>
-            <nav className='flex items-center justify-between p-4'>
+        <div className='bg-black text-white'>
+            <nav className='flex items-center justify-between p-5'>
                 <a href="/" className='flex items-center'>
-                    <img src="/Luxora.png" alt="Logo" width={40} height={40} />
+                    <img src="/luxoral.png" alt="Logo" width={50} height={50} />
                 </a>
                 
                 {/* Toggle Button for Mobile */}
@@ -21,16 +21,17 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 ><lord-icon
                 src="https://cdn.lordicon.com/ipnwkgdy.json"
+                colors="primary:#ffffff"
                 trigger="hover">
             </lord-icon>
                 </button>
 
                 {/* Links - shown based on screen size */}
                 <ul className={`lg:flex gap-7 mx-4 text-md ${isMobileMenuOpen ? 'block' : 'hidden'} lg:block`}>
-                    <li onClick={() => setProduct("shop")} className='hover:font-bold'><Link to='/'>SHOP</Link>{product === "shop" && <hr />}</li>
-                    <li onClick={() => setProduct("men")} className='hover:font-bold'><Link to='/men'>MEN</Link>{product === "men" && <hr />}</li>
-                    <li onClick={() => setProduct("women")} className='hover:font-bold'><Link to='/women'>WOMEN</Link>{product === "women" && <hr />}</li>
-                    <li onClick={() => setProduct("kids")} className='hover:font-bold'><Link to='/kids'>KIDS</Link>{product === "kids" && <hr />}</li>
+                    <li onClick={() => setProduct("shop")} className='hover:font-bold '><Link to='/'>SHOP</Link>{product === "shop" }</li>
+                    <li onClick={() => setProduct("men")} className='hover:font-bold'><Link to='/men'>MEN</Link>{product === "men"}</li>
+                    <li onClick={() => setProduct("women")} className='hover:font-bold'><Link to='/women'>WOMEN</Link>{product === "women"}</li>
+                    <li onClick={() => setProduct("kids")} className='hover:font-bold'><Link to='/kids'>KIDS</Link>{product === "kids"}</li>
                 </ul>
 
                 {/* Search bar - adjusts width on smaller screens */}
@@ -43,6 +44,7 @@ const Navbar = () => {
                     <lord-icon
                         style={{ width: "30px", height: "30px", marginLeft: "-4px", borderRadius: "6px" }}
                         src="https://cdn.lordicon.com/fkdzyfle.json"
+                        colors="primary:#ffffff"
                         trigger="hover"
                         ></lord-icon>
                 </div>
@@ -53,25 +55,19 @@ const Navbar = () => {
                         <lord-icon
                             style={{ width: "30px", height: "30px" }}
                             src="https://cdn.lordicon.com/hrjifpbq.json"
+                            colors="primary:#ffffff"
                             trigger="hover"
                             ></lord-icon>
                     </Link>
-
-                    {/* <Link to="/wishlist" className='flex justify-center items-center'>
-                        <lord-icon
-                        style={{ width: "30px", height: "30px" }}
-                        src="https://cdn.lordicon.com/ulnswmkk.json"
-                        trigger="hover"
-                        ></lord-icon>
-                        </Link> */}
 
                     <Link to="/cart" className='relative flex justify-center items-center'>
                         <lord-icon
                             style={{ width: "30px", height: "30px" }}
                             src="https://cdn.lordicon.com/pbrgppbb.json"
+                            colors="primary:#ffffff"
                             trigger="hover"
                         ></lord-icon>
-                        <div className="cart-count absolute top-0 right-0  text-black rounded-full w-1 h-2 flex items-center justify-center text-xs">
+                        <div className="cart-count absolute top-0 right-0  text-white rounded-full w-1 h-2 flex items-center justify-center text-xs">
                             {getTotalCartItems()}
                         </div>
                     </Link>

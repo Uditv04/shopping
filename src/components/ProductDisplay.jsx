@@ -6,7 +6,7 @@ const ProductDisplay = (props) => {
     const { addToCart } = useContext(ShopContext);
 
     return (
-        <div className='display flex flex-col lg:flex-row my-0 mx-4 lg:mx-[70px]'>
+        <div className='display flex flex-col lg:flex-row my-0 mx-4 lg:mx-[70px] text-white'>
             {/* Left Display (Images) */}
             <div className="display-left flex flex-col lg:flex-row items-center">
                 <div className="img-list flex lg:flex-col gap-4 m-2">
@@ -47,7 +47,7 @@ const ProductDisplay = (props) => {
                         {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
                             <li 
                                 key={size}
-                                className='py-2 px-4 bg-[#fbfbfb] border cursor-pointer rounded-md text-sm sm:text-base hover:bg-gray-200 transition ease-in-out duration-150'
+                                className='py-2 px-4 bg-black border cursor-pointer rounded-md text-sm sm:text-base hover:bg-gray-200 transition ease-in-out duration-150'
                             >
                                 {size}
                             </li>
@@ -56,7 +56,7 @@ const ProductDisplay = (props) => {
                 </div>
 
                 <button 
-                    className='py-3 mt-5 rounded-md w-full sm:w-48 text-base bg-pink-400 mb-4 sm:mb-10 border-none outline-none transition ease-in-out duration-300 transform hover:scale-105'
+                    className='py-3 mt-5 rounded-md w-full sm:w-48 text-base bg-transparent border border-transparent shadow-[0_0_10px_rgba(128,118,228,0.7)] focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4 sm:mb-10 border-none outline-none transition ease-in-out duration-300 transform hover:scale-105'
                     onClick={() => { addToCart(product.id) }}
                 >
                     ADD TO CART
