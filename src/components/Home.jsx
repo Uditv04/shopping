@@ -8,7 +8,7 @@ const Home = () => {
     <>
      <div className="bg-[radial-gradient(125%_125%_at_50%_10%,#000_50%,#63e_80%)]">
   {/* NEW ARRIVALS */}
-  <div className="flex flex-col lg:flex-row min-h-screen p-4 lg:p-0 text-white max-w-screen-2xl mx-auto mb-12">
+  <div className="flex flex-col lg:flex-row p-4 lg:p-0 text-white max-w-screen-2xl mx-auto mb-12">
     <div className="flex flex-1 flex-col justify-center gap-5 lg:gap-10 lg:pl-20 items-center">
       <h2 className="font-semibold text-4xl lg:text-6xl">NEW ARRIVALS</h2>
       <p className="font-bold text-2xl lg:text-4xl text-center">New Collections for Everyone</p>
