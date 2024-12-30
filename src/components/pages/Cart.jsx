@@ -67,13 +67,13 @@ const Cart = () => {
           </div>
           <div className="promo flex-1 flex flex-col gap-4 text-sm md:text-base font-medium px-4 md:px-0 ">
             <p>If you have a promo code, enter it here</p>
-            <div className="promobox flex w-full max-w-xs md:max-w-md lg:max-w-lg p-2 gap-2">
+            <div className="promobox flex w-full max-w-xs md:max-w-md lg:max-w-lg p-2">
               <input
                 className="flex-1 p-3 text-sm rounded-lg bg-transparent border border-transparent shadow-[0_0_10px_rgba(12,100,228,0.7)] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type="text"
                 placeholder="Promo code"
               />
-              <button className="w-24 h-10 md:w-32 md:h-12 text-sm md:text-base bg-transparent border border-transparent shadow-[0_0_10px_rgba(12,100,228,0.7)] focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
+              <button className="w-24 h-12 md:w-32 md:h-12 text-sm md:text-base bg-transparent border border-transparent shadow-[0_0_10px_rgba(12,100,228,0.7)] focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg">
                 Submit
               </button>
             </div>
