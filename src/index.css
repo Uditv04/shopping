@@ -5,3 +5,17 @@
 body{
     font-family: 'Poppins';
 }
+
+
+::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #45167e;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: #1c013c;
+    border-radius: 10px;
+  }
+  
